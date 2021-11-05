@@ -1,4 +1,5 @@
 const getAppProductsStatic = async (req, res) => {
+  throw new Error("Testing async errors");
   res.status(200).json({ msg: "Products testing route" });
 };
 
@@ -7,6 +8,6 @@ const getAppProducts = async (req, res) => {
 };
 
 module.exports = {
-  getAppProductsStatic,
   getAppProducts,
+  getAppProductsStatic,
 };
